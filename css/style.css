@@ -1,0 +1,1140 @@
+:root {
+  --page: 1440px;
+  --header-h: 617.25px;
+  --artboard-h: 5307px;
+  --bg: #ffffff;
+  --header-bg: #eeeeee;
+  --footer-bg: #eeeeee;
+  --text: #000000;
+  --text-muted: #615757;
+  --footer-text: #3f3838;
+  --cta-muted: #6c7e89;
+  --pad-x: 98px;
+  --copy-w: 370px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+p,
+dl,
+dt,
+dd {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: clip;
+  background: var(--bg);
+}
+
+.hero-bg {
+  max-width: none;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.hero-copy,
+.group {
+  will-change: transform;
+}
+
+.artboard {
+  display: contents;
+}
+
+.grad {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grad-themes {
+  background-image: linear-gradient(90deg, #778d77 48.558%, #546454 65.385%, #212721 89.904%);
+}
+
+.grad-screens {
+  background-image: linear-gradient(90deg, #ad7272 0%, #8d5d5d 65.865%, #472f2f 100%);
+}
+
+.grad-styles {
+  /* Gradient was authored on the full title; remap stops onto "Styles." only */
+  background-image: linear-gradient(90deg, #b9b4cf 0%, #6a6484 39%, #18171e 100%);
+}
+
+.grad-favorites {
+  background-image: linear-gradient(90deg, #7b83d7 41.827%, #1a248c 74.038%, #2634c9 100%);
+}
+
+.grad-faq {
+  background-image: linear-gradient(90deg, #39414a 34.615%, #879ab0 75.962%);
+}
+
+.break-phone {
+  display: none;
+}
+
+.hero-bg--phone {
+  display: none;
+}
+
+/* ================================================================== */
+/* Desktop — exact Figma 1440 × 5307 artboard                          */
+/* ================================================================== */
+
+@media (min-width: 1101px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site {
+    position: relative;
+    width: 100%;
+    height: 5307px;
+    overflow: hidden;
+    container-type: inline-size;
+  }
+
+  .site img {
+    max-width: none;
+  }
+
+  .artboard {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1440px;
+    height: 5307px;
+    margin-left: -720px;
+  }
+
+  main {
+    display: contents;
+  }
+
+  /* ----- Header ----- */
+
+  .hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 617.25px;
+    background: var(--header-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    filter: none;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+      "SF Pro", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+  }
+
+  .logo {
+    width: 233.73px;
+    height: 33.31px;
+    object-fit: contain;
+    margin-bottom: 18px;
+  }
+
+  .hero-copy h1 {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 65.25px;
+    text-align: center;
+    letter-spacing: 0;
+    font-variation-settings: "wdth" 100;
+  }
+
+  .tagline {
+    font-size: 45px;
+    font-weight: 510;
+    line-height: 65.25px;
+    text-align: center;
+    letter-spacing: 0;
+    font-variation-settings: "wdth" 100;
+  }
+
+  /* ----- Flatten sections so children sit on the artboard ----- */
+
+  .feature,
+  .feature-media,
+  .feature-copy,
+  .widget-collage,
+  .badges,
+  .faq,
+  .cta,
+  .footer,
+  .footer-nav {
+    display: block;
+    position: static;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    max-width: none;
+    width: auto;
+    height: auto;
+    gap: 0;
+    background: transparent;
+  }
+
+  .feature {
+    display: contents;
+  }
+
+  .feature-media,
+  .widget-collage,
+  .badges,
+  .faq,
+  .cta,
+  .footer-nav {
+    display: contents;
+  }
+
+  .group,
+  .faq h2,
+  .faq dl,
+  .cta h2,
+  .app-store,
+  .copyright,
+  .footer-nav a {
+    position: absolute;
+  }
+
+  .feature-copy {
+    position: absolute;
+    width: 370px;
+    max-width: 370px;
+  }
+
+  .feature--themes .feature-copy {
+    left: 848px;
+    top: 723px;
+  }
+
+  .feature--screens .feature-copy {
+    left: 98px;
+    top: 1377px;
+  }
+
+  .feature--styles .feature-copy {
+    left: 841px;
+    top: 2057px;
+  }
+
+  .feature--favorites .feature-copy {
+    left: 98px;
+    top: 2755px;
+  }
+
+  .group {
+    object-fit: contain;
+    max-width: none;
+  }
+
+  /* 4x PNG displayed at 1x Figma size so retina stays sharp */
+  .group-themes {
+    left: -7.55px;
+    top: 624.52px;
+    width: 835.5px;
+    height: 683.75px;
+  }
+
+  .group-screens {
+    left: 728.53px;
+    top: 1308px;
+    width: 675px;
+    height: 530.25px;
+  }
+
+  .group-styles {
+    left: calc((1440px - 100cqi) / 2);
+    top: 2019.35px;
+    width: 702.25px;
+    height: 683.25px;
+  }
+
+  .group-favorites {
+    left: 698.33px;
+    top: 2571px;
+    width: 716px;
+    height: 716px;
+  }
+
+  .feature-copy h2 {
+    position: static;
+    font-size: 65px;
+    font-weight: 590;
+    letter-spacing: -1px;
+    line-height: 1.12;
+    white-space: nowrap;
+    margin: 0 0 24px;
+  }
+
+  .feature-copy p {
+    position: static;
+    width: auto;
+    max-width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro",
+      sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    font-synthesis: none;
+  }
+
+  .feature-copy p + p {
+    margin-top: 24px;
+  }
+
+  /* FAQ */
+  .faq h2 {
+    position: absolute;
+    left: 309px;
+    top: 3508px;
+    width: 821px;
+    font-size: 65px;
+    font-weight: 590;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .faq dl {
+    position: absolute;
+    left: 160px;
+    top: 3639px;
+    width: 1107px;
+  }
+
+  .faq dl div + div {
+    margin-top: 53px;
+  }
+
+  .faq dt {
+    font-size: 35px;
+    font-weight: 590;
+    line-height: 53px;
+  }
+
+  .faq dd {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro",
+      sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text-muted);
+    line-height: 53px;
+    font-synthesis: none;
+  }
+
+  /* CTA */
+  .cta h2 {
+    position: absolute;
+    left: 183px;
+    top: 4704px;
+    width: 1061px;
+    font-size: 60px;
+    font-weight: 590;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cta h2 span {
+    color: var(--cta-muted);
+  }
+
+  .app-store {
+    position: absolute;
+    left: 533px;
+    top: 4843px;
+    width: 361px;
+    height: 121px;
+  }
+
+  .app-store img {
+    width: 361px;
+    height: 121px;
+    object-fit: contain;
+  }
+
+  .app-store:hover img {
+    opacity: 0.88;
+  }
+
+  .app-store:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 6px;
+    border-radius: 12px;
+  }
+
+  /* Footer bar — full viewport width, content hugging the bottom */
+  .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 168px;
+    background: var(--footer-bg);
+    z-index: 2;
+  }
+
+  .footer-inner {
+    position: relative;
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .copyright {
+    position: absolute;
+    left: 32px;
+    bottom: 8px;
+    top: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--footer-text);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .link-support {
+    position: absolute;
+    right: 32px;
+    left: auto;
+    bottom: 64px;
+    top: auto;
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--footer-text);
+    letter-spacing: -0.02em;
+    text-align: right;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .link-privacy {
+    position: absolute;
+    right: 32px;
+    left: auto;
+    bottom: 36px;
+    top: auto;
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--footer-text);
+    letter-spacing: -0.02em;
+    text-align: right;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .link-contact {
+    position: absolute;
+    right: 32px;
+    left: auto;
+    bottom: 8px;
+    top: auto;
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--footer-text);
+    letter-spacing: -0.02em;
+    text-align: right;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ================================================================== */
+/* Flow layout for tablet + phone                                      */
+/* ================================================================== */
+
+@media (max-width: 1100px) {
+  main {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+  }
+
+  .hero {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    height: auto;
+    aspect-ratio: 1440 / 617.25;
+    min-height: 0;
+    background: var(--header-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    width: min(342px, 46%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    filter: none;
+    gap: 0.7vw;
+  }
+
+  .logo {
+    width: clamp(84px, 13.4vw, 154px);
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(17px, 3.5vw, 38px);
+    font-weight: 700;
+    line-height: 1.08;
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: clamp(13px, 2.65vw, 26px);
+    font-weight: 510;
+    white-space: nowrap;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 56px 48px;
+  }
+
+  .feature--themes {
+    grid-template-columns: 1.4fr 0.9fr;
+    padding-left: 0;
+  }
+
+  .feature-copy {
+    max-width: min(370px, 100%);
+  }
+
+  .feature--themes .feature-copy,
+  .feature--styles .feature-copy {
+    justify-self: end;
+  }
+
+  .feature h2 {
+    font-size: clamp(22px, 3.9vw, 40px);
+    font-weight: 590;
+    letter-spacing: -0.04em;
+    line-height: 1.12;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+
+  .feature--themes .group-themes {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .feature-copy p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .feature-copy p + p {
+    margin-top: 24px;
+  }
+
+  .feature-media {
+    position: relative;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .feature-media--widgets {
+    margin-left: -48px;
+    padding: 0;
+    width: calc(100% + 48px);
+  }
+
+  .group {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .faq {
+    padding: 56px 48px;
+  }
+
+  .faq h2 {
+    font-size: 44px;
+    font-weight: 590;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .faq dl {
+    max-width: 1107px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .faq dt {
+    font-size: 26px;
+    font-weight: 590;
+    line-height: 1.35;
+  }
+
+  .faq dd {
+    font-size: 20px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .cta {
+    padding: 56px 24px 40px;
+    text-align: center;
+  }
+
+  .cta h2 {
+    font-size: 40px;
+    font-weight: 590;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+  }
+
+  .cta h2 span {
+    color: var(--cta-muted);
+  }
+
+  .app-store {
+    display: inline-block;
+  }
+
+  .app-store img {
+    width: 280px;
+    height: auto;
+  }
+
+  .footer {
+    position: relative;
+    z-index: 1;
+    background: var(--footer-bg);
+    min-height: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 20px 24px 8px;
+    width: 100%;
+  }
+
+  .footer-inner {
+    display: contents;
+  }
+
+  .copyright,
+  .footer-nav a {
+    font-size: 13px;
+    color: var(--footer-text);
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    text-align: right;
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 699px) {
+  .site {
+    --gutter: max(24px, env(safe-area-inset-left), env(safe-area-inset-right));
+  }
+
+  .hero {
+    aspect-ratio: unset;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #eeeeee;
+    padding-bottom: clamp(36px, 11vw, 56px);
+    overflow: hidden;
+  }
+
+  .hero-bg--desktop {
+    display: none;
+  }
+
+  .hero-bg--phone {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: top center;
+    pointer-events: none;
+  }
+
+  .hero-copy {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    margin-top: clamp(-44px, -11vw, -32px);
+    padding: 0 16px 0;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .logo {
+    width: clamp(120px, 36vw, 176px);
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(20px, 6.6vw, 32px);
+    line-height: 1.08;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: clamp(14px, 4.6vw, 22px);
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    padding: 56px 0 32px;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .feature--themes .feature-copy,
+  .feature--styles .feature-copy {
+    order: -1;
+    justify-self: start;
+    align-self: stretch;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .feature-copy {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 var(--gutter);
+    text-align: left;
+    justify-self: start;
+    align-self: stretch;
+  }
+
+  .feature h2 {
+    font-size: clamp(26px, 8.6vw, 36px);
+    letter-spacing: -0.045em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .feature--themes .feature-media {
+    padding: 0;
+  }
+
+  .feature--themes .group-themes {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .feature-copy p {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro",
+      sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+  }
+
+  .feature-copy p + p {
+    margin-top: 0.9em;
+  }
+
+  .feature-media,
+  .feature-media--screens,
+  .feature-media--favorites {
+    min-height: 0;
+    padding: 0 var(--gutter);
+  }
+
+  .feature-media--widgets {
+    min-height: 0;
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .faq {
+    padding: 64px var(--gutter) 36px;
+  }
+
+  .faq h2 {
+    font-size: clamp(18px, 6vw, 24px);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 28px;
+    white-space: nowrap;
+  }
+
+  .faq dl {
+    gap: 24px;
+  }
+
+  .faq dt {
+    font-size: 19px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .faq dd {
+    font-size: 17px;
+    line-height: 1.47059;
+    margin-top: 6px;
+  }
+
+  .cta {
+    padding: 64px var(--gutter) 48px;
+  }
+
+  .cta h2 {
+    font-size: clamp(18px, 6vw, 24px);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+    text-wrap: unset;
+  }
+
+  .app-store img {
+    width: 200px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 32px var(--gutter, 32px) max(12px, env(safe-area-inset-bottom));
+    gap: 4px;
+    min-height: 0;
+  }
+
+  .footer-nav {
+    order: 0;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
+  }
+
+  .copyright {
+    order: 1;
+  }
+
+  .copyright,
+  .footer-nav a {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+
+/* ================================================================== */
+/* Privacy & Support pages                                             */
+/* ================================================================== */
+
+.page-legal {
+  --legal-gutter: 40px;
+  background: #fff;
+  color: #1d1d1f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-top {
+  flex: 0 0 auto;
+  padding: 22px var(--legal-gutter);
+  border-bottom: 1px solid #e8e8ed;
+}
+
+.legal-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.legal-brand img {
+  display: block;
+  width: 148px;
+  height: auto;
+}
+
+.legal-main {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px var(--legal-gutter) 96px;
+}
+
+.legal-main h1 {
+  margin: 0 0 10px;
+  font-size: 40px;
+  font-weight: 590;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.legal-lead {
+  margin: 0 0 28px;
+  font-size: 19px;
+  line-height: 1.42;
+  letter-spacing: -0.022em;
+  color: #1d1d1f;
+}
+
+.legal-updated {
+  margin: 0 0 40px;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.016em;
+  color: #86868b;
+}
+
+.legal-main h2 {
+  margin: 40px 0 12px;
+  font-size: 24px;
+  font-weight: 590;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.legal-main p {
+  margin: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.legal-main ul,
+.legal-main ol {
+  margin: 0 0 16px;
+  padding-left: 1.25em;
+}
+
+.legal-main li {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.legal-main a {
+  color: #06c;
+  text-decoration: none;
+}
+
+.legal-main a:hover {
+  text-decoration: underline;
+}
+
+.page-legal .footer {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  padding-left: var(--legal-gutter);
+  padding-right: var(--legal-gutter);
+}
+
+@media (min-width: 1101px) {
+  .page-legal {
+    --legal-gutter: 40px;
+  }
+
+  .page-legal main.legal-main {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px var(--legal-gutter) 96px;
+  }
+
+  .page-legal .footer {
+    height: 168px;
+    background: var(--footer-bg);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-legal .copyright {
+    left: 40px;
+  }
+
+  .page-legal .link-support,
+  .page-legal .link-privacy,
+  .page-legal .link-contact {
+    right: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page-legal {
+    --legal-gutter: 48px;
+  }
+}
+
+@media (max-width: 699px) {
+  .page-legal {
+    --legal-gutter: max(32px, env(safe-area-inset-left), env(safe-area-inset-right));
+  }
+
+  .legal-top {
+    padding: 18px var(--legal-gutter);
+  }
+
+  .legal-brand img {
+    width: 128px;
+  }
+
+  .legal-main {
+    padding: 40px var(--legal-gutter) 72px;
+  }
+
+  .legal-main h1 {
+    font-size: 32px;
+  }
+
+  .legal-main h2 {
+    font-size: 21px;
+  }
+
+  .page-legal .footer {
+    padding: 32px var(--legal-gutter) max(12px, env(safe-area-inset-bottom));
+  }
+}
