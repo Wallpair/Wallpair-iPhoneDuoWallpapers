@@ -86,6 +86,7 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .grad-themes {
@@ -356,15 +357,19 @@ a {
   /* FAQ */
   .faq h2 {
     position: absolute;
-    left: 309px;
+    left: 50%;
     top: 3508px;
-    width: 821px;
+    width: max-content;
+    max-width: calc(100% - 80px);
+    transform: translateX(-50%);
     font-size: 65px;
     font-weight: 590;
-    line-height: 1.15;
+    line-height: 1.35;
+    padding: 0.05em 0.08em 0.22em;
     text-align: center;
     letter-spacing: 0;
     white-space: nowrap;
+    overflow: visible;
   }
 
   .faq dl {
@@ -668,8 +673,11 @@ a {
   .faq h2 {
     font-size: 44px;
     font-weight: 590;
+    line-height: 1.35;
+    padding: 0.05em 0.08em 0.2em;
     text-align: center;
     margin-bottom: 28px;
+    overflow: visible;
   }
 
   .faq dl {
@@ -902,10 +910,12 @@ a {
   .faq h2 {
     font-size: clamp(18px, 6vw, 24px);
     letter-spacing: -0.04em;
-    line-height: 1.1;
+    line-height: 1.35;
+    padding: 0.05em 0.06em 0.22em;
     text-align: center;
     margin-bottom: 28px;
     white-space: nowrap;
+    overflow: visible;
   }
 
   .faq dl {
