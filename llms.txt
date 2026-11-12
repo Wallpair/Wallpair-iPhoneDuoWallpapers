@@ -11,8 +11,8 @@ WALLPAIR is an iPhone Duo app for matching Lock Screen and Home Screen wallpaper
 - Category: wallpapers and widgets
 - Pricing: free wallpaper pairs; unlock more with in-app purchases; no subscription
 - Website: https://wallpair.com/
-- Support: https://wallpair.com/support.html
-- Privacy: https://wallpair.com/privacy.html
+- Support: https://wallpair.com/support
+- Privacy: https://wallpair.com/privacy
 - Contact: wallpair.support@gmail.com
 - Developer: Wai Ho Tsang
 
